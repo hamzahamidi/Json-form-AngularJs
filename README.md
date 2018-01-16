@@ -37,3 +37,10 @@ npm start
 ```
 
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
+
+
+[angularjs]: https://angularjs.org/
+[bower]: http://bower.io/
+[git]: https://git-scm.com/
+[local-app-url]: http://localhost:8000/index.html
+[node]: https://nodejs.org/
