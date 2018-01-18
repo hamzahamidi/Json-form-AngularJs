@@ -19,18 +19,44 @@ angular.module('myApp.view1', ['ngRoute', 'schemaForm'])
           "title": "Name",
           "type": "string",
           "pattern": "^[a-zA-Z]+$",
-          "description": "Valid name."
+          "description": "name of the service instance should match ...",
+          "validationMessage": "Only letters"          
         },
+        "Description": {
+          "title": "Description",
+          "type": "string",
+          "maxLength": 20,
+          "validationMessage": "Max 20"
+        },
+        "bindable": {
+          "title": "bindable",
+          "type": "boolean"
+        },
+        "simpleUrl": {
+          "title": "simpleUrl",
+          "type": "string",
+          "pattern": "^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_\+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?"        },
         "numbers": {
           "title": "numbers",
           "type": "number",
-          "validationMessage": "Valid number"
+          "validationMessage": "Invalid number"
         },
         "email": {
           "title": "Email",
           "type": "string",
           "pattern": "^\\S+@\\S+$",
-          "description": "Valid Email."
+          "validationMessage": "Invalid Email."
+        },
+        "directory": {
+          "title": "directory",
+          "type": "string",
+          "pattern": "^(.+)/([^/]+)$",
+          "placeholder": "/var/vcap/store/cassandra", 
+          "validationMessage": "Invalid directory."
+        },
+        "title": {
+          "type": "string",
+          "enum": ['dr','jr','sir','mrs','mr','NaN','dj']
         },
         "comment": {
           "title": "Comment",
@@ -53,6 +79,7 @@ angular.module('myApp.view1', ['ngRoute', 'schemaForm'])
         title: "Save"
       }
     ];
+    this.schema = $scope.schema;
 
     $scope.model = {};
   });
