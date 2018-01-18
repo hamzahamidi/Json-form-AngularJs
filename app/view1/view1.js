@@ -51,7 +51,7 @@ angular.module('myApp.view1', ['ngRoute', 'schemaForm'])
           "title": "directory",
           "type": "string",
           "pattern": "^(.+)/([^/]+)$",
-          "placeholder": "/var/vcap/store/cassandra", 
+          "default": "/var/vcap/store/cassandra", 
           "validationMessage": "Invalid directory."
         },
         "title": {
