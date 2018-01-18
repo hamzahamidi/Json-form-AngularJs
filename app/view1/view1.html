@@ -1,3 +1,11 @@
-<div ng-controller="FormController">
-    <form sf-schema="schema" sf-form="form" sf-model="model"></form>
+<h1 class="primary">Dynamic forms with Json Shema</h1>
+<div class="container">
+    <div ng-controller="FormController as formCTRL">
+        <form sf-schema="schema" sf-form="form" sf-model="model"></form>
+        <h4>Json shema:</h4>
+
+        <pre class="prettyprint">        
+            {{schema}}
+            </pre>
+    </div>
 </div>
